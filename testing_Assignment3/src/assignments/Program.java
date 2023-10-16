@@ -9,6 +9,7 @@ public class Program {
 		
 		Ex4 ex4 = new Ex4();
 		ex4.Q3456();
+		ex4.Q7();
 	}
 
 }
