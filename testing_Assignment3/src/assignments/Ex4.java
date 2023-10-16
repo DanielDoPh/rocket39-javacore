@@ -73,27 +73,38 @@ public class Ex4 {
 		String[] nameArr = fullname.split("\\s+");
 		int nsize = nameArr.length;
 		for (int j = 0; j <= nsize - 1; j++) {
-			if (nameArr[j].equals(" "))
+//			System.out.println(j+": "+nameArr[j]);
+			if (nameArr[j] == "")
 				continue;
 			if (j == nsize - 1)
 				sname += nameArr[j];
 			else
-				sname += nameArr[j]+" ";
+				sname += nameArr[j] + " ";
 		}
 
+		System.out.println("S-ed no space name: " + sname);
+
 		// make first char upper case
-		sname = makeFirstChartUpCase(sname);
-		System.out.println("S-ed name: ");
+		nameArr = sname.split("\\s+");
+		String sname2 = "";
+		for (int j = 0; j < nameArr.length; j++) {
+
+			if (nameArr[j] == "")
+				continue;
+			if (j == nameArr.length - 1)
+				sname2 += makeFirstChartUpCase(nameArr[j]);
+			else
+				sname2 += makeFirstChartUpCase(nameArr[j]) + " ";
+		}
+
+		System.out.println("S-ed up cased name: " + sname2);
 	}
 
 	public String makeFirstChartUpCase(String in) {
 		String out = "";
 
 		char[] c = in.toCharArray();
-		if (!Character.isUpperCase(c[0])) {
-			c[0] = Character.toUpperCase(c[0]);
-		}
-
+		c[0] = Character.toUpperCase(c[0]);
 		out = String.valueOf(c);
 		return out;
 

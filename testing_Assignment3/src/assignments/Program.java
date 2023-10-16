@@ -8,7 +8,7 @@ public class Program {
 		//ex1.Q4();
 		
 		Ex4 ex4 = new Ex4();
-		ex4.Q3456();
+		//ex4.Q3456();
 		ex4.Q7();
 	}
 
